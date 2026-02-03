@@ -9,7 +9,7 @@ RUN mvn -f ./pom.xml clean package
 #
 # Package stage
 #
-FROM openjdk:11-jre-slim
+FROM eclipse-temurin:11-jre-jammy
 COPY --from=build ./target/*.jar /usr/local/lib/1.jar
 
 EXPOSE 9527 8443
